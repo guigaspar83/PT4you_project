@@ -1,0 +1,467 @@
+body, ul, li, p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+}
+
+#h2{
+  text-align:center;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#teste{
+    width: 100%;
+    min-height: 130px;
+    background-color: #539DF3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#menu{
+    float:right;
+    width: 650px;
+    height: 60px;
+}
+
+.menu {
+    display:flex;
+    float: right;
+}
+
+.menu li {
+
+    margin: 10px;
+}
+
+.menu li a {
+    
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    border: 0;
+    line-height: 5px;
+  	border-color: #FF8800;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #08068f;
+    border-radius: 10px;
+    background-color: #FF8800;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+
+}
+
+#logo{
+    min-width: 230px;
+    height: 100px;
+    background-image: url(../images/pt4you.png);
+    background-size: 100%;  
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+#home{
+    font-size: 60px;
+    color: transparent;
+}
+
+/* Resto da app */
+
+#main{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%;
+    min-height: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: url(../images/lisboa_ponte.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+  }
+  
+  #mainContainer{
+    width: 1200px;
+    min-height: 600px;
+    background-color: rgba(255, 255, 255, 0.40);
+  }
+  
+.grid-container{
+  position:absolute;
+  top: 400px;
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  /*background-color: #08068f;*/
+  display: grid;
+  grid-template-columns: auto auto;
+  align-content: center;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.grid-item{
+  padding: 50px 0;
+  background-color: #FF8800;
+  font: 500 40px Arial;
+  color: white;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+/*@media screen and (max-width: 900px) {
+  .grid-container, .grid-item {
+    width: 80%;
+    margin-top: 0;
+    margin-left: 5%;
+    text-align: left;
+  }*/
+  
+
+  #footer{
+    width: 100%;
+    min-height: 100px;
+    background-color: rgb(217, 255, 0);
+  
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+ 
+  #inputTextBox_Form
+  {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    background-color: rgba(255, 255, 255, 0.50);
+  }
+  #inputTextBox_Registo
+  {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    background-color: rgba(255, 255, 255, 0.50);
+  }
+
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  #btSubmit[type=submit] {
+    width: 200px;
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    border: 0;
+    line-height: 5px;
+    border-color: #FF8800;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #08068f;
+    border-radius: 10px;
+    background-color: #FF8800;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+    float: right;
+    margin-right: 15%;
+  }
+  
+  #btSubmit[type=submit]:hover {
+    background-color: #ff8800c5;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .rowLabel {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    vertical-align:middle;
+    text-align: right;
+  }
+  
+  .rowInput {
+    float: left;
+    width: 60%;
+    margin-top: 6px;
+    margin-right: 15%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .rowLabel, .rowInput, .grid-container, .grid-item {
+      width: 90%;
+      margin-top: 0;
+      margin-left: 5%;
+      text-align: left;
+    }
+    
+    #teste{
+      width: 100%;
+      min-height: 275px;
+      background-color: #539DF3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .grid-container{
+      position:absolute;
+      top: 800px;
+      width: 480px;
+      height: 500px;
+      margin: 0 auto;
+      padding: 10px;
+      /*background-color: #08068f;*/
+      display: grid;
+      grid-template-columns: auto;
+      align-content: center;
+    
+    }
+
+    input[type=submit] {
+      width: 40%;
+      margin-top: 10px;
+      margin-right: 30%;
+      margin-bottom: 10px;
+    }
+  
+  }
+
+  #login_iniciar[type=email], select, textarea {
+    width: 50%;
+    min-width: 230px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    background-color: rgba(255, 255, 255, 0.50);
+
+  }
+
+  #pass_iniciar[type=password], select, textarea {
+    width: 50%;
+    min-width: 230px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    background-color: rgba(255, 255, 255, 0.50);
+  }
+
+#rowLabel_iniciar {
+    width: 40%;
+    height: 60px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    border: 0;
+    vertical-align:middle;
+    text-align: right;
+    float: left;
+    margin-left: 5%;
+  }
+  
+ #rowInput_iniciar {
+    width: 50%;
+    height: 60px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    border: 0;
+    float: left;
+
+  }
+  
+  #row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #btSubmit_iniciar[type=submit] {
+    width: 200px;
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    border: 0;
+    line-height: 5px;
+  	border-color: #FF8800;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #08068f;
+    border-radius: 10px;
+    background-color: #FF8800;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+    float: right;
+    margin-right: 30%;
+   
+  }
+  #tituloPagina{
+      width: 100%;
+      text-align: center;
+      height: 40px;
+      margin-top: 10px;
+  }
+
+  #btPesquisar{
+    width: 65px;
+    height: 65px;
+    margin-top: 18px;
+    margin-left: 25px;
+    background-image: url(../images/lupa.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: 0px 0px;
+    background-size: 100%;
+    border: none;
+    cursor: pointer;
+
+
+}
+/* Home */
+#mainInputBox_Home{
+    width: 100%;
+    min-height: 100px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 1;
+}
+
+#inputBox_Home1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    height: 60px;
+    box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+    background-color: white;
+    width: 300px;
+}
+#inputBox_Home2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    height: 60px;
+    box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+    background-color: white;
+    width: 200px;
+}
+#inputBox_Home3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    height: 60px;
+    box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+    background-color: white;
+    width: 200px;
+}
+#inputBox_Home4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    height: 60px;
+    box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+    background-color: white;
+    width: 100px;
+}
+
+#inputBoxLabel_Home{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    width: 85%;
+    height: 14px;
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
+#inputTextBox_Home{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    width: 85%;
+    margin-left: 10px;
+    margin-top: -8px;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0.50);
+}
+
+#inputTextBox_Home:focus{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    border: 0px;
+    width: 85%;
+    margin-left: 10px;
+    margin-top: -8px;
+}
+
+#btPesquisar_Home{
+    width: 65px;
+    height: 65px;
+    margin-top: 18px;
+    margin-left: 25px;
+    background-image: url(../images/lupa.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: 0px 0px;
+    background-size: 100%;
+    border: none;
+    cursor: pointer;
+
+}
+  
