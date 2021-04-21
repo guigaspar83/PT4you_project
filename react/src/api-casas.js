@@ -1,21 +1,16 @@
-//api-registo.js
+//api-casas.js
 var http = require('http'); 
 const express = require('express');
-const app = express();
+const router = express.Router();
 const bodyParser = require('body-parser');
 const postsService = require('../server/service/postService');
 const axios = require("axios");
-//const postsData = require('../data/postsData');
-
-app.use(require("cors")());
-app.use(bodyParser.urlencoded({ extended: true })); 
-app.use(bodyParser.json());
 
 const request = function (url, method, data) {
     return axios ({ url, method, data });
 };
 
-app.post('/casas', async function (req, res) { 
+router.post('/casas', async function (req, res) { 
 
     console.log("Registo recebido!");
 
@@ -61,35 +56,10 @@ app.post('/casas', async function (req, res) {
     const post2 = response2.data2;
 }) 
 
-app.post('/pesquisa2', async function (req, res) { 
+router.post('/pesquisa2', async function (req, res) { 
 
     console.log("Registo recebido!");
 
-    /*var  data = {
-        rua: req.body.rua, 
-        num: parseInt(req.body.num), 
-        complemento: req.body.complemento,
-        distrito: req.body.distrito,
-        concelho: req.body.concelho,
-        codpostal: parseInt(req.body.codpostal),
-        pais: req.body.pais
-    };
-
-   var  data2 = {
-        tipo: req.body.tipo,
-        tipologia: parseInt(req.body.tipologia),
-        num_camas: parseInt(req.body.num_camas),
-        num_banho: parseInt(req.body.num_banho),
-        ar_cond: req.body.ar_cond,
-        animais: req.body.animais,
-        cozinha: req.body.cozinha,
-        tv: req.body.tv,
-        wifi: req.body.wifi,
-        fumar: req.body.fumar,
-        descricao: req.body.descricao,
-        hora_checkin: req.body.hora_checkin,
-        hora_checkout: req.body.hora_checkout,
-    };*/
     const data2 = req.body;
     //console.log(data2);
     //console.log(data);
@@ -106,9 +76,5 @@ app.post('/pesquisa2', async function (req, res) {
 }) 
 
 
-app.use(express.json());
-app.use('/', require('../server/route/postsRoute'));
 
-var server = http.createServer(app); 
-server.listen(3033);
-console.log("Servidor na porta 3033...")
+module.exports = router;

@@ -1,15 +1,11 @@
 //api-Validamail.js
 var http = require('http'); 
 const express = require('express');
-const app = express();
+const router = express();
 const bodyParser = require('body-parser');
 const postsService = require('../server/service/postService');
 const axios = require("axios");
 var nodemailer = require('nodemailer');
-
-app.use(require("cors")());
-app.use(bodyParser.urlencoded({ extended: true })); 
-app.use(bodyParser.json());
 
 const request = function (url, method, data) {
     return axios ({ url, method, data });
@@ -25,7 +21,7 @@ var remetente = nodemailer.createTransport({
     pass: 'upSkill123' }
     });
 
-app.post('/validamail', async function (req, res) { 
+router.post('/validamail', async function (req, res) { 
 
     console.log("Registo recebido!");
   
@@ -91,6 +87,4 @@ app.post('/validamail', async function (req, res) {
     };
 });
 
-var server = http.createServer(app); 
-server.listen(3032);
-console.log("Servidor na porta 3032...")
+module.exports = router;

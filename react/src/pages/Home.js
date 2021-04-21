@@ -20,7 +20,7 @@ function Home() {
   
   function handleFormSubmit(event){
     event.preventDefault();
-    const result = axios.post('http://localhost:3033/pesquisa2', campos).then(response => {
+    const result = axios.post('http://localhost:3031/pesquisa2', campos).then(response => {
 
     })
 }

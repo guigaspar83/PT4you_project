@@ -101,6 +101,7 @@ exports.savemail = function(post) {
     return database.one('insert into users (id_mail, senha, tipo_user) values ($1, $2, $3) returning *', [post.mail, post.password, post.tipo_user]);
 }
 
+
 exports.postPesquisa = function (post) {
     return database.query('select * from propriedades where exists (select * from moradas where propriedades.id_morada = moradas.id_morada and moradas.concelho = $1)' , [post.concelho, post.tipo, post.tipologia, post.num_camas, post.num_banho, post.ar_cond, post.animais, post.cozinha, post.tv, post.wifi, post.fumar, post.descricao, post.hora_checkin, post.hora_checkout]);
 }

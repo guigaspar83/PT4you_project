@@ -100,6 +100,11 @@ app.post('/registo', async function (req, res) {
 app.use(express.json());
 app.use('/', require('../server/route/postsRoute'));
 
+app.use('/', require('./api-casas.js'));
+app.use('/', require('./api-distrito.js'));
+app.use('/', require('./api-Validamail.js'));
+
+
 var server = http.createServer(app); 
 server.listen(3031);
 console.log("Servidor na porta 3031...")

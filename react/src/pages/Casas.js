@@ -37,13 +37,13 @@ function Casas(){
  
     function handleFormSubmit(event){
         event.preventDefault();
-        axios.post('http://localhost:3033/casas', campos).then(response => {
+        axios.post('http://localhost:3031/casas', campos).then(response => {
         console.log(campos);
         })
     }
     
     useEffect(() => {
-        axios.get('http://localhost:3030/distritos').then(response => {
+        axios.get('http://localhost:3031/distritos').then(response => {
             setDistritos(response.data);
         })
     }, []);

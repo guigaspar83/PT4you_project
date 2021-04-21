@@ -33,14 +33,14 @@ function Form(){
  
     function handleFormSubmit(event){
         event.preventDefault();
-        axios.post('http://localhost:3032/validamail', campos).then(response => {
+        axios.post('http://localhost:3031/validamail', campos).then(response => {
         console.log(campos);    
         alert(response.data.dados.length + ' registos!');
         })
     }
     
     useEffect(() => {
-        axios.get('http://localhost:3030/distritos').then(response => {
+        axios.get('http://localhost:3031/distritos').then(response => {
             setDistritos(response.data);
         })
     }, []);
